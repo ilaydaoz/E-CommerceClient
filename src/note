@@ -1,0 +1,7 @@
+-Cors politikası nedir?
+Browswer da clientler çalışıyosa cors politikası devreye girer.
+Farklı web sitelerinin birbirlerinin verilerine erişimini düzenleyen 
+bir güvenlik önlemidir. Tarayıcılar, genellikle aynı kök (origin(Protokol,Host,Port)) alanından 
+gelen isteklere izin verir. CORS, farklı kök alanları arasında bu kısıtlamaları 
+aşmak için kullanılır ve güvenli veri paylaşımını sağlar. Yani, bir web sitesinin 
+verilerini başka bir web sitesi üzerinden kullanmak istediğinizde, CORS izinleri gerekebilir.
