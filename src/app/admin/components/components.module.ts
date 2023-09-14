@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { ProductsModule } from './products/products.module';
 import { OrderModule } from './order/order.module';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-
-
 
 @NgModule({
   declarations: [],

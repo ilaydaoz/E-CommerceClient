@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products.component';
 import { RouterModule } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { CreateComponent } from './create/create.component';
 @NgModule({
   declarations: [
     ProductsComponent,
