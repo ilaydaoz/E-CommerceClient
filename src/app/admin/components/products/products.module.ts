@@ -8,6 +8,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { CreateComponent } from './create/create.component';
+
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -22,7 +23,7 @@ import { CreateComponent } from './create/create.component';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class ProductsModule { }
