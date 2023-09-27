@@ -12,7 +12,7 @@ export class DeleteDirective {
     private _renderer: Renderer2,
     private productservice: ProductService,
     public dialog: MatDialog
-    ) {
+  ) {
     const img = _renderer.createElement("img");
     img.setAttribute("src", "/assets/delete.png");
     img.setAttribute("style", "cursor : pointer;");
@@ -26,25 +26,27 @@ export class DeleteDirective {
   @HostListener("click")
 
   async onclick() {
-    this.openDialog(async() =>{
-        const td: HTMLImageElement = this.element.nativeElement;
-    await this.productservice.delete(this.id)
-    $(td.parentElement).fadeOut(1000,() =>{
-      this.callback.emit();
-    });
-  
+    this.openDialog(async () => {
+      const td: HTMLImageElement = this.element.nativeElement;
+      await this.productservice.delete(this.id)
+      $(td.parentElement).animate({
+        opacity:0,
+        left:"+=50",
+        height:"toogle"
+      },700,()=>{
+        this.callback.emit();
+      })
     });
   }
 
-  
-  openDialog(afterClosed : any): void {
+  openDialog(afterClosed: any): void {
     const dialogRef = this.dialog.open(DeleteDialogsComponent, {
       data: DeleteState.Yes,
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result == DeleteState.Yes)
-      afterClosed();
+        afterClosed();
 
     });
   }
